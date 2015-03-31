@@ -1,0 +1,11 @@
+$("#institutionId").textbox('clear');
+    $("#institutionCode").textbox('clear');
+    $("#institutionName").textbox('clear');
+    $("#provinceCode").combobox('select', '');
+    $("#cityCode").combobox('select', '');
+    $("#acountInstName").textbox('clear');
+    $("#cnapsNo").textbox('clear');
+    $("#netLineNo").textbox('clear');
+    $("#institutionTypeEnum").combobox('select','');
+    $("#institutionStatusEnum").combobox('select','');
+    $("#delFlag").combobox('select','0');

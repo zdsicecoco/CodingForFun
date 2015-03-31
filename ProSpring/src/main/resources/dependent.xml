@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans	      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="resourceBean" class="spring.helloworld.ioc.base.ResouceBean" init-method="init" destroy-method="destroy">
+        <property name="file" value="D:/test.txt"/>
+    </bean>
+
+    <bean id="dependentBean" class="spring.helloworld.ioc.base.DependentBean" init-method="init" destroy-method="destroy" depends-on="resourceBean">
+        <property name="resouceBean" ref="resourceBean"/>
+    </bean>
+</beans>

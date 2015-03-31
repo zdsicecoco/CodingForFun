@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <context-param>
+        <param-name>zdsname</param-name>
+        <param-value>zhangdongsheng</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>Chapter1 servlet</servlet-name>
+        <servlet-class>chapter1.Ch1Servlet</servlet-class>
+        <init-param>
+            <param-name>emailAddress</param-name>
+            <param-value>25075117@qq.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Chapter1 servlet</servlet-name>
+        <url-pattern>/Serv1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <servlet-class>chapter3.BearSelect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/SelectBear.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Ch4 CodeDownload</servlet-name>
+        <servlet-class>chapter4.Ch4Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ch4 CodeDownload</servlet-name>
+        <url-pattern>/yuanfafenxi.pdf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>chapter5</servlet-name>
+        <servlet-class>chapter5.listener.ListenerTester</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>chapter5</servlet-name>
+        <url-pattern>/Dog</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>tortoise</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>chapter5.listener.MyServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>check cookie</servlet-name>
+        <servlet-class>chapter5.cookie.CheckCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>check cookie</servlet-name>
+        <url-pattern>/checkcookie.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>cookie test</servlet-name>
+        <servlet-class>chapter5.cookie.CookieTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookie test</servlet-name>
+        <url-pattern>/cookietest.do</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>chapter5.session.BeerSessionCounter</listener-class>
+    </listener>
+
+</web-app>

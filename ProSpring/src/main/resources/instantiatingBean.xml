@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans	      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean name="bean1" class="spring.helloworld.ioc.base.HelloImpl2"/>
+    <bean name="bean2" class="spring.helloworld.ioc.base.HelloImpl2">
+        <constructor-arg index="0" value="Hello Spring!"/>
+    </bean>
+    <bean name="bean3" class="spring.helloworld.ioc.base.HelloApiStaticFactory" factory-method="newInstance">
+        <constructor-arg index="0" value="Hello Spring"/>
+    </bean>
+    <bean id="beanInstanceFactory" class="spring.helloworld.ioc.base.HelloApiInstanceFactory"/>
+    <bean id="bean4" factory-bean="beanInstanceFactory" factory-method="newInstance">
+        <constructor-arg index="0" value="Hello Spring!"></constructor-arg>
+    </bean>
+</beans>
